@@ -1,5 +1,4 @@
 
-# POOii
-Programs in the Language JAVA
+Disciplina: Programação Orientada a Objetos II.
 
-Storage of the programs
+Diretório vinculado com as atividades da disciplina.
