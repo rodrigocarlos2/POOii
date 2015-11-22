@@ -1,2 +1,293 @@
 
-1 - Questão
+// 1 - Questão
+// Eclipse 
+
+import java.awt.*;
+
+public class gridLayout extends Frame{
+	
+	Panel p1, p2, p3, p4, p5;
+	Label lnome, lsexo, ldisc, lcom;
+	TextField tf1;
+	Choice choice;
+	List disc;
+	TextArea ta;
+	Button b;
+	
+	public gridLayout(){
+		
+		setLayout(new GridLayout(5, 1));
+		setVisible(true);
+		setLocation(500, 250);
+		setBackground(Color.white);
+		setSize(500, 600);
+		
+		p1 = new Panel();
+		p1.setVisible(true);
+		p1.setBackground(Color.white);
+		
+		lnome = new Label("Nome: ");
+		lnome.setForeground(Color.blue);
+		lnome.setVisible(true);
+		
+		tf1 = new TextField("  Digite  ");
+		tf1.setVisible(true);
+		tf1.setForeground(Color.black);
+		
+		p1.add(lnome);
+		p1.add(tf1);
+		
+		add(p1);
+		
+		p2 = new Panel();
+		p2.setVisible(true);
+		p2.setBackground(Color.white);
+		
+		lsexo = new Label("Sexo: ");
+		lsexo.setVisible(true);
+		lsexo.setForeground(Color.blue);
+		
+		choice = new Choice();
+		
+		choice.addItem("Masculino");
+		choice.addItem("Feminino");
+		
+		p2.add(lsexo);
+		p2.add(choice);
+		
+		add(p2);
+		
+		p3 = new Panel();
+		p3.setVisible(true);
+		p3.setBackground(Color.white);
+		
+		disc = new List(4, true);
+		disc.setVisible(true);
+		disc.add("IHC");
+		disc.add("POO I");
+		disc.add("POO II");
+		disc.add("BD I");
+		disc.add("BD II");
+		
+		ldisc = new Label("Disciplinas: ");
+		ldisc.setVisible(true);
+		ldisc.setForeground(Color.blue);
+		
+		p3.add(ldisc);
+		p3.add(disc);
+		
+		add(p3);
+
+		p4 = new Panel();
+		p4.setVisible(true);
+		p4.setBackground(Color.white);
+		
+		lcom = new Label("Comentário: ");
+		lcom.setVisible(true);
+		lcom.setForeground(Color.blue);
+
+		ta = new TextArea();
+		ta.setVisible(true);
+		ta.setForeground(Color.white);
+		ta.setEditable(true);
+		ta.setBackground(Color.black);
+		
+		p4.add(lcom);
+		p4.add(ta);
+		
+		add(p4);
+		
+		b = new Button(" CADASTRAR ");
+		b.setVisible(true);
+		b.setBackground(Color.white);
+		b.setForeground(Color.blue);
+		
+		p4 = new Panel();
+		p4.setVisible(true);
+		p4.setBackground(Color.white);
+		
+		p4.add(b);
+		
+		add(p4);
+	}
+	
+	public static void main(String args[]){
+		gridLayout gLa = new gridLayout();
+	}
+	
+}
+
+// 2 - Questão
+// Eclipse
+
+import java.awt.*;
+
+public class questaoII extends Frame{
+	
+	Label l;
+	Button b1, b2;
+	Panel p1, p2;
+	
+	public questaoII(){
+		
+		setVisible(true);
+		setSize(450, 450);
+		setBackground(Color.white);
+		setLayout(new GridLayout(2, 1));
+		
+		p1 = new Panel();
+		p1.setVisible(true);
+		p1.setBackground(Color.white);
+		
+		l = new Label("deseja realmente cadastrar estas informações?");
+		l.setVisible(true);
+		l.setForeground(Color.black);
+		l.setBackground(Color.white);
+		
+		p1.add(l);
+		
+		add(p1);
+		
+		p2 = new Panel();
+		p2.setVisible(true);
+		p2.setBackground(Color.white);
+		
+		b1 = new Button("CONFIRMAR");
+		b1.setVisible(true);
+		b1.setForeground(Color.black);
+		b1.setBackground(Color.white);
+		b2 = new Button("CANCELAR");
+		b2.setVisible(true);
+		b2.setForeground(Color.black);
+		b2.setBackground(Color.white);
+		
+		p2.add(b1);
+		p2.add(b2);
+		
+		add(p2);
+		
+	}
+	
+	public static void main(String args[]){
+		questaoII questII = new questaoII();
+	}
+	
+}
+
+// 3 - Questão
+// Eclipse
+
+import java.awt.*;
+
+public class gridLayout extends Frame{
+	
+	Panel p1, p2, p3, p4, p5;
+	Label lnome, lsexo, ldisc, lcom;
+	TextField tf1;
+	Choice choice;
+	List disc;
+	TextArea ta;
+	Button b;
+	
+	public gridLayout(){
+		
+		setLayout(new GridLayout(5, 1));
+		setVisible(true);
+		setLocation(500, 250);
+		setBackground(Color.white);
+		setSize(500, 600);
+		
+		p1 = new Panel();
+		p1.setVisible(true);
+		p1.setBackground(Color.white);
+		
+		lnome = new Label("Nome: ");
+		lnome.setForeground(Color.blue);
+		lnome.setVisible(true);
+		
+		tf1 = new TextField("  Digite  ");
+		tf1.setVisible(true);
+		tf1.setForeground(Color.black);
+		
+		p1.add(lnome);
+		p1.add(tf1);
+		
+		add(p1);
+		
+		p2 = new Panel();
+		p2.setVisible(true);
+		p2.setBackground(Color.white);
+		
+		lsexo = new Label("Sexo: ");
+		lsexo.setVisible(true);
+		lsexo.setForeground(Color.blue);
+		
+		choice = new Choice();
+		
+		choice.addItem("Masculino");
+		choice.addItem("Feminino");
+		
+		p2.add(lsexo);
+		p2.add(choice);
+		
+		add(p2);
+		
+		p3 = new Panel();
+		p3.setVisible(true);
+		p3.setBackground(Color.white);
+		
+		disc = new List(4, true);
+		disc.setVisible(true);
+		disc.add("IHC");
+		disc.add("POO I");
+		disc.add("POO II");
+		disc.add("BD I");
+		disc.add("BD II");
+		
+		ldisc = new Label("Disciplinas: ");
+		ldisc.setVisible(true);
+		ldisc.setForeground(Color.blue);
+		
+		p3.add(ldisc);
+		p3.add(disc);
+		
+		add(p3);
+
+		p4 = new Panel();
+		p4.setVisible(true);
+		p4.setBackground(Color.white);
+		
+		lcom = new Label("Comentário: ");
+		lcom.setVisible(true);
+		lcom.setForeground(Color.blue);
+
+		ta = new TextArea();
+		ta.setVisible(true);
+		ta.setForeground(Color.white);
+		ta.setEditable(true);
+		ta.setBackground(Color.black);
+		
+		p4.add(lcom);
+		p4.add(ta);
+		
+		add(p4);
+		
+		b = new Button(" CADASTRAR ");
+		b.setVisible(true);
+		b.setBackground(Color.white);
+		b.setForeground(Color.blue);
+		
+		p4 = new Panel();
+		p4.setVisible(true);
+		p4.setBackground(Color.white);
+		
+		p4.add(b);
+		
+		add(p4);
+	}
+	
+	public static void main(String args[]){
+		gridLayout gLa = new gridLayout();
+	}
+	
+}
