@@ -1,6 +1,6 @@
 
 // 1 - Questão
-// Eclipse 
+// Plataforma: Eclipse 
 
 import java.awt.*;
 
@@ -118,7 +118,7 @@ public class gridLayout extends Frame{
 }
 
 // 2 - Questão
-// Eclipse
+// Plataforma: Eclipse
 
 import java.awt.*;
 
@@ -175,7 +175,7 @@ public class questaoII extends Frame{
 }
 
 // 3 - Questão
-// Eclipse
+// Plataforma: Eclipse
 
 import java.awt.*;
 
@@ -290,4 +290,59 @@ public class gridLayout extends Frame{
 		gridLayout gLa = new gridLayout();
 	}
 	
+}
+
+// 4 - Questão
+// Plataforma: Eclipse
+
+
+import java.awt.*;
+
+public class CanvasWindow extends Frame{
+	
+	//Declaration of Variable my of type MyCanvas
+	MyCanvas my;
+	
+	//Construtor of CanvasWindow (Main Class)
+	public CanvasWindow(){
+		
+		// Behavior of Frame
+		setSize(350, 350);
+		setLocation(100, 100);
+		setTitle("Canvas with Star");
+		setResizable(true);
+		setVisible(true);	
+		
+		my = new MyCanvas();
+		
+		// Addition of Object my in Frame
+		add(my);
+	}
+	
+	// Class MyCanvas extends of Canvas
+	// Classe anônima
+	public class MyCanvas extends Canvas{
+		
+		// Construtor of Class
+		public MyCanvas(){
+			setSize(300, 300);
+			setBackground(Color.white);
+			setVisible(true);
+		}
+		
+		// Paint of the Star with rows
+		public void paint (Graphics g) {
+	         Graphics2D g2;
+	         g2 = (Graphics2D) g;
+	         g2.drawLine(150, 0, 0, 300);
+	         g2.drawLine(0, 300, 300, 100);
+	         g2.drawLine(300, 100, 0, 100);
+	         g2.drawLine(0, 100, 300, 300);
+	         g2.drawLine(300, 300, 150, 0);
+	     }
+	}
+	
+	public static void main(String args[]){
+		CanvasWindow cw = new CanvasWindow();
+	}
 }
