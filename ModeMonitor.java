@@ -22,8 +22,12 @@ public class ModeMonitor{
 		
 		try{
 			
-			String exec = "ifconfig "+interfaceWlan0+" down";
 			
+
+			String exec = "sudo ifconfig "+interfaceWlan0+" down";
+			
+			System.out.println(exec);
+
 			run.exec(exec);
 			
 			stages++;
@@ -35,8 +39,10 @@ public class ModeMonitor{
 		
 		if(stages==1){
 			
-			String exec = "iwconfig "+interfaceWlan0+" mode monitor";
+			String exec = "sudo iwconfig "+interfaceWlan0+" mode monitor";
 			
+			System.out.println(exec);
+
 			try {
 				run.exec(exec);
 				stages++;
@@ -48,8 +54,10 @@ public class ModeMonitor{
 		
 		if(stages==2){
 			
-			String exec = "ifconfig "+interfaceWlan0+ " up";
+			String exec = "sudo ifconfig "+interfaceWlan0+ " up";
 			
+			System.out.println(exec);
+
 			try{
 				
 				run.exec(exec);
